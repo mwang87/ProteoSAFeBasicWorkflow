@@ -1,0 +1,5 @@
+echo "cp tool.xml $1/worker/conf/tool.xml"
+echo "mkdir $1/workflows/basicworkflow"
+echo "cp basicworkflow/* $1/workflows/basicworkflow/"
+echo "mkdir $1/tools/basicworkflow"
+echo "cp bin/basictool.py $1/tools/basicworkflow/"

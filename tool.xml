@@ -1,4 +1,6 @@
 <toolset>
+    <fetchMethod value="link"/>
+
     <pathSet base="basicworkflow">
         <toolPath tool="basictool"       path="basictool.py"/>
     </pathSet>
