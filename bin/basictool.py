@@ -109,7 +109,7 @@ def main():
     #Output Log File
     output_log_file = open(output_log_filename, "w")
     output_log_file.write("Run Successful")
-    output_log_filename.close()
+    output_log_file.close()
 
 
 if __name__ == "__main__":
