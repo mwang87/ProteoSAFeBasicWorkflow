@@ -104,7 +104,13 @@ def main():
 
 
     #Execute Whatever you need here
-    ######
+
+    #Dummy writing file into result
+    output_result_filename = os.path.join(output_result_folder, "test.out")
+    output_result_file = open(output_result_filename, "w")
+    output_result_file.write("TEST DATA")
+    output_result_file.close();
+    
 
     #Output Log File
     output_log_file = open(output_log_filename, "w")
