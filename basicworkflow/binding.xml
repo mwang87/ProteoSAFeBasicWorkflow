@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<binding>
+    <bind action="begin" type="download">
+        <url value="{livesearch.download}"/>
+        <query name="task" valueRef="@task" />
+        <query name="user" valueRef="@user"/>
+        <compression type="zip" />
+        <download port="spectra" type="folder">
+            <query name="resource" value="spectra"/>
+        </download>
+        <download port="flowParams" type="file">
+            <query name="resource" value="params"/>
+        </download>
+    </bind>
+
+    <bind action="basictool" tool="basictool">
+        <inputAsRequirement port="spectra"             requirement="spectra"/>
+        <inputAsRequirement port="flowParams"       requirement="flowParams"/>
+        <productionToOutput port="log"           production="log"/>
+        <productionToOutput port="result"           production="result"/>
+    </bind>
+
+    <bind action="end" type="upload">
+        <url value="{livesearch.upload}"/>
+        <query name="task" valueRef="@task"/>
+        <contentQuery name="content"/>
+        <compression type="zip"/>
+
+        <upload port="result" type="folder">
+            <query name="resource" value="result"/>
+        </upload>
+
+        <upload port="log" type="file">
+            <query name="resource" value="log"/>
+        </upload>
+    </bind>
+</binding>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<interface id="speclib_add" version="1.2.3">
+	<!-- View definitions -->
+	<view id="view_log" label="View Log">
+		<blockRef id="main" type="view_log"/>
+	</view>
+
+	<!-- Block definitions -->
+	<block id="view_log" type="stream">
+		<data>
+			<source type="file" name="log/"/>
+		</data>
+	</block>
+</interface>

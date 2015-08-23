@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<flow name="speclib-add">
+	<collection name="spectra"/>
+	<object     name="workflowParameters"/>
+	<collection name="result"/>
+	<object     name="log"/>
+
+	<action name="begin">
+		<output port="spectra"       collection="spectra"/>
+		<output port="flowParams" object="workflowParameters"/>
+	</action>
+
+
+	<action name="basictool">
+		<input  port="spectra"             collection="spectra"/>
+		<input  port="flowParams"             object="workflowParameters"/>
+		<output port="result"           collection="result"/>
+		<output port="log"           object="log"/>
+	</action>
+
+	<action name="end">
+		<input port="log"           object="log"/>
+		<input port="result"           collection="result"/>
+	</action>
+</flow>
