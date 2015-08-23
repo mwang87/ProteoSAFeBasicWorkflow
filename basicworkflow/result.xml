@@ -5,16 +5,20 @@
 		<source type="folder" name="result/"/>
 	</download>
 
-	
+
 	<!-- View definitions -->
 	<view id="view_log" label="View Log">
 		<blockRef id="main" type="view_log"/>
 	</view>
 
+
 	<!-- Block definitions -->
 	<block id="view_log" type="stream">
 		<data>
 			<source type="file" name="log/"/>
+			<parsers>
+				<parser type="stream" contentType="text/plain"/>
+			</parsers>
 		</data>
 	</block>
 </interface>
