@@ -8,7 +8,7 @@
     <tool name="basictool">
         <require name="spectra"   type="folder"/>
         <require name="flowParams" type="file"/>
-        <produce name="log"   type="file"/>
+        <produce name="log"   type="file" naming="explicit" extension="log"/>
         <produce name="result"   type="folder"/>
 
         <execution env="binary" argConvention="adhoc">
