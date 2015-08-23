@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <interface id="speclib_add" version="1.2.3">
+
+	<download>
+		<source type="folder" name="result/"/>
+	</download>
+
+	
 	<!-- View definitions -->
 	<view id="view_log" label="View Log">
 		<blockRef id="main" type="view_log"/>
