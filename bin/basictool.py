@@ -33,8 +33,6 @@ def parse_xml_file(input_file):
         else:
           key_value_pairs[splits[0]] = []
           key_value_pairs[splits[0]].append(splits[1])
-
-
     return key_value_pairs
 
 def get_mangled_file_mapping(params):
@@ -90,7 +88,7 @@ def make_sure_path_exists(path):
         os.makedirs(directory)
 
 def usage():
-    print "<TODO>
+    print "<TODO>"
 
 def main():
     usage()
@@ -100,6 +98,15 @@ def main():
     output_log_filename = sys.argv[3]
     output_result_folder = sys.argv[4]
 
+    #Parsing the parameters
+    parsed_parameters = parse_xml_file(open(input_parameters))
+    print parsed_parameters
+
+
+    #Execute Whatever you need here
+    ######
+
+    #Output Log File
     output_log_file = open(output_log_filename, "w")
     output_log_file.write("Run Successful")
     output_log_filename.close()

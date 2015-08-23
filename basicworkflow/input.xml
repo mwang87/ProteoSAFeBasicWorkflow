@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <interface id="basicworkflow" version="1.2.5">
-    <workflow-id>Basic Wrapper Workflow</workflow-id>
+    <workflow-id>BASICWORKFLOW</workflow-id>
     <workflow-label>BasicWorkflow</workflow-label>
 
     <!-- Parameter declarations -->
@@ -19,6 +19,7 @@
         </parameter>
 
         <parameter name="parameters1" label="Parameter1">
+            <default value="parametervalue1"/>
         </parameter>
     </parameters>
 
@@ -46,9 +47,9 @@
                 </label>
             </cell>
             <cell>
-                <module id="parameters1" type="text">
+                <input parameter="parameters1" type="text">
                     <attribute name="size" value="30"/>
-                </module>
+                </input>
             </cell>
         </row>
     </block>
