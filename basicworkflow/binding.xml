@@ -11,6 +11,9 @@
         <download port="flowParams" type="file">
             <query name="resource" value="params"/>
         </download>
+        <downloadParams>
+            <query name="resource" value="params"/>
+        </downloadParams>
     </bind>
 
     <bind action="basictool" tool="basictool">
